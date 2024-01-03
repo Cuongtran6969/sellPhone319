@@ -1,0 +1,404 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartegories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section id="header">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-sm-1 col-md-3">
+                    <div class="header-logo">
+                        <a href="#">
+                            <span class="header-logo_name">Sell-phone</span>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTFGN0JGRkVDMEM1MTFFQTkwMkZBOEFENzdFODgwMUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTFGN0JGRkZDMEM1MTFFQTkwMkZBOEFENzdFODgwMUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MUY3QkZGQ0MwQzUxMUVBOTAyRkE4QUQ3N0U4ODAxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MUY3QkZGREMwQzUxMUVBOTAyRkE4QUQ3N0U4ODAxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgpTqXEAAAhlSURBVHja7JwLbBTH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"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                    <div class="input-box">
+                        <div class="search-icon">
+                            <i class='bx bx-search'></i>
+                        </div>
+                        <div class="search-input">
+                            <input type="text" placeholder="Search for products, brands and more"
+                                aria-label="Example text with button addon">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="user-status">
+                                <div class="user-logo">
+                                    <i class='bx bx-user text-white'></i>
+                                </div>
+                                <span class="user-title text-white">Profile</span>
+                                <div class="user-box_access">
+                                    <div class="user-box-header">
+                                        <!-- access -->
+                                        <div class="user-access">
+                                            <a href="/profile.html" class="d-block">
+                                                <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="">
+                                            </a>
+                                            <div class="user-access-info">
+                                                <span>Eden Smith</span>
+                                                <p>Los Angeles, CA</p>
+                                            </div>
+                                            <a href="#" class="logout-link">
+                                                <div class="logout-button">
+                                                    Logout
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- not access -->
+                                        <!-- <div class="user-not-access">
+                                            <span class="not-access-title">Wellcome</span>
+                                            <p>To access account and manage orders</p>
+                                            <a href="#" class="login-link">
+                                                <div class="login-button">
+                                                    Login / Signup
+                                                </div>
+                                            </a>
+                                        </div> -->
+
+                                    </div>
+                                    <hr>
+                                    <ul class="user-access-link">
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Gift Cards</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li class="access-new">
+                                            <a href="#">Myntra Insider</a>
+                                            <div class="special">New</div>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="page-access-link">
+                                        <li><a href="#">Myntra Credit</a></li>
+                                        <li><a href="#">Coupons</a></li>
+                                        <li><a href="#">Saved Cards</a></li>
+                                        <li><a href="#">Saved VPA</a></li>
+                                        <li><a href="#">Saved Addresses</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="message-status">
+                                <div class="bell-logo">
+                                    <i class='bx bx-bell text-white'></i>
+                                </div>
+                                <span class="love-title text-white">Notification
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="cart-status">
+                                <div class="cart-logo">
+                                    <i class='bx bx-shopping-bag text-white'></i>
+                                </div>
+                                <span class="cart-title text-white">Bag 0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row h-100">
+            <div class="col-md-2 h-100 left-nav-admin p-0">
+                <div class="p-5 pe-0">
+                    <ul>
+                        <li class="py-4 ps-3 mb-3">
+                            <a href="" class="fs-2 text-white d-flex align-items-center">
+                                <i class='bx bxs-dashboard me-3'></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="py-4 ps-3 mb-3 active">
+                            <a href="" class="fs-2 text-white">
+                                <i class='bx bx-cart me-3'></i>
+                                <span>Order</span>
+                            </a>
+                        </li>
+                        <li class="py-4 ps-3 mb-3">
+                            <a href="" class="fs-2 text-white d-flex align-items-center">
+                                <i class='bx bx-circle-three-quarter me-3'></i>
+                                <span>Statistic</span>
+                            </a>
+                        </li>
+                        <li class="py-4 ps-3 mb-3">
+                            <a href="" class="fs-2 text-white d-flex align-items-center">
+                                <i class='bx bxs-data me-3'></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="py-4 ps-3 mb-3">
+                            <a href="" class="fs-2 text-white d-flex align-items-center">
+                                <i class='bx bx-line-chart me-3'></i>
+                                <span>Stock</span>
+                            </a>
+                        </li>
+                        <li class="py-4 ps-3 mb-3">
+                            <a href="" class="fs-2 text-white d-flex align-items-center">
+                                <i class='bx bx-purchase-tag-alt me-3'></i>
+                                <span>Offer</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 h-100">
+                <h1 class="fw-bold my-4">Order</h1>
+                <div class="w-50 bg-white border d-flex align-items-center rounded-md overflow-hidden">
+                    <span class="p-3 border-end text-black-weak">
+                        <i class="fa-solid fa-magnifying-glass fs-3"></i>
+                    </span>
+                    <input type="text" placeholder="Search bill id" class="border-0 w-100 py-4 px-3 fs-4">
+                </div>
+                <div class="row mt-5 ">
+                    <div class="col-md-6">
+                        <ul class="d-flex flex-wrap align-items-center">
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order choose"><a href=""
+                                    class="text-black-weak">All order</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order"><a href=""
+                                    class="text-black-weak">Process</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order"><a href=""
+                                    class="text-black-weak">Wait</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 display-order"><a href=""
+                                    class="text-black-weak">Done</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select w-50 ms-auto fs-3" aria-label="Default select example">
+                            <option value="1">Order list by: Id</option>
+                            <option value="2">Order list by: Date</option>
+                            <option value="3">Order list by: Total</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="mt-5 table-header bg-weak rounded-xl ">
+                        <div class="row fs-4 fw-bold py-4 px-5 d-flex align-items-center justify-content-between">
+                            <div class="col">Bill ID</div>
+                            <div class="col">Customer Name</div>
+                            <div class="col">Date</div>
+                            <div class="col">Total</div>
+                            <div class="col">Status</div>
+                            <div class="col">View</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                        <div class="row fs-4 py-4 px-5 d-flex align-items-center justify-content-between">
+                            <div class="col fw-bold">#1234</div>
+                            <div class="col d-flex align-items-center">
+                                <div class="rounded-fill me-3">
+                                    <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="">
+                                </div>
+                                <span class="fs-4">Trần Văn Cường</span>
+                            </div>
+                            <div class="col">07/08/2015</div>
+                            <div class="col">200</div>
+                            <div class="col text-warning">Wait</div>
+                            <div class="col">
+                                <div class="d-flex align-items-center position-relative box-detail">
+                                    <div class="">
+                                        <span class="me-3">Detail</span>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
+                                    <div class="position-absolute top-100 d-none change-status">
+                                        <ul class="border bg-white rounded-md">
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-danger">Process</a></li>
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-warning">Wait</a></li>
+                                            <li class="py-3 px-4 pe-5 pointer"><a href="" class="text-success">Done</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                        <div class="row fs-4 py-4 px-5 d-flex align-items-center justify-content-between">
+                            <div class="col fw-bold">#1235</div>
+                            <div class="col d-flex align-items-center">
+                                <div class="rounded-fill me-3">
+                                    <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="">
+                                </div>
+                                <span class="fs-4">Trần Văn Cường</span>
+                            </div>
+                            <div class="col">07/08/2015</div>
+                            <div class="col">200</div>
+                            <div class="col text-success">Done</div>
+                            <div class="col">
+                                <div class="d-flex align-items-center position-relative box-detail">
+                                    <div class="">
+                                        <span class="me-3">Detail</span>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
+                                    <div class="position-absolute top-100 change-status d-none">
+                                        <ul class="border bg-white rounded-md">
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-danger">Process</a></li>
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-warning">Wait</a></li>
+                                            <li class="py-3 px-4 pe-5 pointer"><a href="" class="text-success">Done</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                        <div class="row fs-4 py-4 px-5 d-flex align-items-center justify-content-between">
+                            <div class="col fw-bold">#1236</div>
+                            <div class="col d-flex align-items-center">
+                                <div class="rounded-fill me-3">
+                                    <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="">
+                                </div>
+                                <span class="fs-4">Trần Văn Cường</span>
+                            </div>
+                            <div class="col">07/08/2015</div>
+                            <div class="col">200</div>
+                            <div class="col text-danger">Process</div>
+                            <div class="col">
+                                <div class="d-flex align-items-center position-relative box-detail">
+                                    <div class="">
+                                        <span class="me-3">Detail</span>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
+                                    <div class="position-absolute top-100 d-none change-status">
+                                        <ul class="border bg-white rounded-md">
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-danger">Process</a></li>
+                                            <li class="py-3 px-4 pe-5 border-bottom pointer"><a href=""
+                                                    class="text-warning">Wait</a></li>
+                                            <li class="py-3 px-4 pe-5 pointer"><a href="" class="text-success">Done</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-10 h-100">
+                <h1 class="fw-bold my-4">Product</h1>
+                <div class="row mt-5 ">
+                    <div class="col-md-6">
+                        <ul class="d-flex flex-wrap align-items-center">
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order choose"><a href="" class="text-black-weak">All order</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order"><a href="" class="text-black-weak">Process</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 me-3 display-order"><a href="" class="text-black-weak">Wait</a></li>
+                            <li class="px-4 py-2 rounded-xl border fs-4 display-order"><a href=""  class="text-black-weak">Done</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select w-50 ms-auto fs-3" aria-label="Default select example">
+                            <option value="1">Order list by: Id</option>
+                            <option value="2">Order list by: Date</option>
+                            <option value="3">Order list by: Total</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="row bg-weak rounded-lg px-3 py-4 fs-4">
+                        <div class="col">product_id</div>
+                        <div class="col">product_image</div>
+                        <div class="col">product_name</div>
+                        <div class="col">product_price</div>
+                        <div class="col">sale_percent</div>
+                        <div class="col">product_type</div>
+                        <div class="col">product_brand</div>
+                        <div class="col">number_soled</div>
+                        <div class="col">date</div>
+                        <div class="col">Setting</div>
+                    </div>
+                    <div class="">
+                        <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                            <div class="row position-relative fs-4 px-3 py-4 d-flex align-items-center justify-content-between">
+                                <div class="col">#123</div>
+                                <div class="col">
+                                    <img src="./images/f1.jpg" alt="">
+                                </div>
+                                <div class="col">Rey Nylon Backpack</div>
+                                <div class="col">265.000đ</div>
+                                <div class="col">10%</div>
+                                <div class="col">T-shirt</div>
+                                <div class="col">Dior</div>
+                                <div class="col">10</div>
+                                <div class="col">20/10/2023</div>
+                                <div class="col d-flex">
+                                    <a href="" class="me-4 text-info fw-bold">Update</a>
+                                    <a href="" class="text-danger fw-bold">Delete</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                            <div class="row position-relative fs-4 px-3 py-4 d-flex align-items-center justify-content-between">
+                                <div class="col">#123</div>
+                                <div class="col">Rey Nylon Backpack</div>
+                                <div class="col">265.000đ</div>
+                                <div class="col">10%</div>
+                                <div class="col">T-shirt</div>
+                                <div class="col">Dior</div>
+                                <div class="col">10</div>
+                                <div class="col">20/10/2023</div>
+                                <div class="col d-flex">
+                                    <a href="" class="me-4 text-info fw-bold">Update</a>
+                                    <a href="" class="text-danger fw-bold">Delete</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-5 ordered-item border-top bg-white rounded-lg border">
+                            <div class="row position-relative fs-4 px-3 py-4 d-flex align-items-center justify-content-between">
+                                <div class="col">#123</div>
+                                <div class="col">Rey Nylon Backpack</div>
+                                <div class="col">265.000đ</div>
+                                <div class="col">10%</div>
+                                <div class="col">T-shirt</div>
+                                <div class="col">Dior</div>
+                                <div class="col">10</div>
+                                <div class="col">20/10/2023</div>
+                                <div class="col d-flex">
+                                    <a href="" class="me-4 text-info fw-bold">Update</a>
+                                    <a href="" class="text-danger fw-bold">Delete</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
